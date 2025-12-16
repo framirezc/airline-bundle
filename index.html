@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" />
@@ -20,35 +20,35 @@
             <nav class="flex gap-6 text-sm text-slate-300">
                 <a class="hover:text-white">Dashboard</a>
                 <a class="hover:text-white">Bundles</a>
-                <a class="hover:text-white">Aerolíneas</a>
-                <a class="hover:text-white">Configuración</a>
+                <a class="hover:text-white">Airlines</a>
+                <a class="hover:text-white">Settings</a>
             </nav>
         </div>
     </header>
 
 
     <section class="bg-white rounded-xl shadow p-6 mb-6">
-        <h2 class="text-xl font-semibold text-gray-800">Crear Bundle</h2>
+        <h2 class="text-xl font-semibold text-gray-800">Create Bundle</h2>
         <p class="text-gray-500 text-sm mb-4">
-            Selecciona la información para generar un bundle personalizado
+            Select the information to generate a custom bundle
         </p>
         <div class="mb-4"></div>
-            <label class="block text-sm font-medium mb-2">Aerolínea</label>
+            <label class="block text-sm font-medium mb-2">Airline</label>
             <select id="airlineSelect" class="md:w-1/3 w-full rounded-lg border-gray-300"></select>            
             </select>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-                <label class="block text-sm font-medium">Aeropuerto de Origen</label>
+                <label class="block text-sm font-medium">Origin Airport</label>
                 <select class="mt-1 w-full rounded-lg border-gray-300">
                     <option>CDG - Charles de Gaulle</option>
                 </select>
-                <p class="text-xs text-gray-500 mt-1">Francia · Europa</p>
+                <p class="text-xs text-gray-500 mt-1">France · Europe</p>
             </div>
 
             <div>
-                <label class="block text-sm font-medium">Aeropuerto de Destino</label>
+                <label class="block text-sm font-medium">Destination Airport</label>
                 <select class="mt-1 w-full rounded-lg border-gray-300">
                     <option>DOH - Hamad International</option>
                 </select>
@@ -58,13 +58,13 @@
     </section>
     <section class="bg-white rounded-xl shadow p-6 mb-6">
         <div class="flex justify-between items-center mb-4">
-            <h2 class="text-lg font-semibold">Datos de Mercancías</h2>
+            <h2 class="text-lg font-semibold">Merchandise Data</h2>
             
-            <!-- Toggle de Unidades -->
+            <!-- Unit Toggle -->
             <div class="flex items-center gap-3">
-                <span class="text-sm text-gray-600">Unidades:</span>
+                <span class="text-sm text-gray-600">Units:</span>
                 <button id="unitToggle" class="relative inline-flex items-center h-8 rounded-full w-20 bg-blue-600 transition-colors">
-                    <span class="sr-only">Cambiar unidades</span>
+                    <span class="sr-only">Change units</span>
                     <span id="unitLabel" class="absolute left-2 text-xs font-semibold text-white">CM</span>
                     <span class="inline-block w-6 h-6 transform bg-white rounded-full transition-transform translate-x-1"></span>
                 </button>
@@ -76,12 +76,12 @@
                 <thead class="bg-slate-100 text-gray-700">
                     <tr>
                         <th class="p-3">ID</th>
-                        <th class="p-3">Cantidad</th>
-                        <th class="p-3">Longitud <span id="lengthUnit" class="text-xs">(cm)</span></th>
-                        <th class="p-3">Ancho <span id="widthUnit" class="text-xs">(cm)</span></th>
-                        <th class="p-3">Alto <span id="heightUnit" class="text-xs">(cm)</span></th>
-                        <th class="p-3">Peso <span id="weightUnit" class="text-xs">(kg)</span></th>
-                        <th class="p-3">Perímetro <span id="perimeterUnit" class="text-xs">(cm)</span></th>
+                        <th class="p-3">Quantity</th>
+                        <th class="p-3">Length <span id="lengthUnit" class="text-xs">(cm)</span></th>
+                        <th class="p-3">Width <span id="widthUnit" class="text-xs">(cm)</span></th>
+                        <th class="p-3">Height <span id="heightUnit" class="text-xs">(cm)</span></th>
+                        <th class="p-3">Weight <span id="weightUnit" class="text-xs">(kg)</span></th>
+                        <th class="p-3">Perimeter <span id="perimeterUnit" class="text-xs">(cm)</span></th>
                     </tr>
                 </thead>
                 <tbody id="merchandiseTableBody">
@@ -99,11 +99,11 @@
         </div>
         
         <button id="addRowBtn" class="mt-4 text-blue-600 hover:text-blue-700 text-sm font-medium flex items-center gap-2">
-            <span>+</span> Agregar fila
+            <span>+</span> Add Row
         </button>
     </section>
     <section class="bg-white rounded-xl shadow p-6 mb-6">
-        <h2 class="text-lg font-semibold mb-4">Resumen de Resultados</h2>
+        <h2 class="text-lg font-semibold mb-4">Results Summary</h2>
 
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
             <div class="bg-slate-50 p-4 rounded-lg">
@@ -122,17 +122,17 @@
             </div>
 
             <div class="bg-slate-50 p-4 rounded-lg">
-                <p class="text-sm text-gray-500">Total Piezas</p>
+                <p class="text-sm text-gray-500">Total Pieces</p>
                 <p id="totalPieces" class="text-2xl font-bold">0</p>
             </div>
         </div>
     </section>
     <div class="flex gap-4">
         <button id="generateBundleBtn" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg">
-            Generar Bundle
+            Generate Bundle
         </button>
         <button id="resetBtn" class="bg-gray-200 hover:bg-gray-300 px-6 py-3 rounded-lg">
-            Nueva Búsqueda
+            New Search
         </button>
     </div>
 

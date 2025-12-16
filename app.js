@@ -15,7 +15,7 @@ fetch('./bundles.json')
     loadAirlines();
   })
   .catch(error => {
-    console.error('Error al cargar datos:', error);
+    console.error('Error loading data:', error);
   });
 
 // Función para cargar las aerolíneas en el select
@@ -23,11 +23,11 @@ function loadAirlines() {
   const select = document.getElementById('airlineSelect');
   
   if (!select) {
-    console.error('No se encontró el elemento airlineSelect');
+    console.error('airlineSelect element not found');
     return;
   }
   
-  select.innerHTML = '<option value="">Selecciona una aerolínea</option>';
+  select.innerHTML = '<option value="">Select an airline</option>';
 
   airlines.forEach(airline => {
     const option = document.createElement('option');
@@ -51,8 +51,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const selectedAirline = airlines.find(a => a.id === selectedId);
       
       if (selectedAirline) {
-        console.log('Aerolínea seleccionada:', selectedAirline);
-        // Aquí puedes agregar lógica adicional cuando se seleccione una aerolínea
+        console.log('Selected airline:', selectedAirline);
+        // Here you can add additional logic when an airline is selected
       }
     });
   }
@@ -257,9 +257,9 @@ function addMerchandiseRow() {
 function generateBundle() {
   const airlineSelect = document.getElementById('airlineSelect');
   
-  // Validar que se haya seleccionado una aerolínea
+  // Validate that an airline has been selected
   if (!airlineSelect.value) {
-    alert('Por favor selecciona una aerolínea');
+    alert('Please select an airline');
     return;
   }
   
@@ -275,8 +275,8 @@ function generateBundle() {
     const quantityInput = row.querySelector('input[type="number"]');
     const quantity = parseInt(quantityInput.value) || 0;
     
-    // Por ahora, todas las piezas van a check-in
-    // (En el futuro podrías agregar lógica para detectar oversize/overweight)
+    // For now, all pieces go to check-in
+    // (In the future you could add logic to detect oversize/overweight)
     totalCheckin += quantity;
     totalPieces += quantity;
   });
