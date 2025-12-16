@@ -1,0 +1,41 @@
+{
+  "airlines": [
+    {
+      "id": 1,
+      "code": "AF",
+      "name": "Air France"
+    },
+    {
+      "id": 2,
+      "code": "QR",
+      "name": "Qatar Airways"
+    },
+    {
+      "id": 3,
+      "code": "AM",
+      "name": "Aeroméxico"
+    }
+  ],
+  "airports": [
+    {
+      "code": "CDG",
+      "name": "Charles de Gaulle Airport",
+      "country": "France",
+      "continent": "Europe"
+    },
+    {
+      "code": "DOH",
+      "name": "Hamad International Airport",
+      "country": "Qatar",
+      "continent": "Asia"
+    }
+  ],
+  "bundles": [
+    {
+      "airlineId": 2,
+      "origin": "CDG",
+      "destination": "DOH",
+      "price": 14500
+    }
+  ]
+}
